@@ -7,9 +7,9 @@ export const metadata: Metadata = { title: "Landscape Maintenance", description:
 export default function Page() {
   return (
     <>
-      <section className="relative h-[60vh] min-h-[460px] flex items-end bg-ink-950">
+      <section className="relative h-[60vh] min-h-[460px] flex items-end bg-ink-900">
         <Image src="/images/landscape-maint-3.jpg" alt="Landscape Maintenance" fill className="object-cover" priority />
-        <div className="absolute inset-0 bg-gradient-to-t from-ink-950/90 via-ink-950/40 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-ink-900/88 via-ink-950/40 to-transparent" />
         <div className="relative wrap pb-16">
           <nav className="flex gap-2 text-xs text-white/40 mb-5">
             <Link href="/" className="hover:text-copper-400 transition-colors">Home</Link><span>/</span>
@@ -43,7 +43,7 @@ export default function Page() {
         </div>
       </section>
 
-      <section className="section-pad bg-ink-950">
+      <section className="section-pad bg-ink-900">
         <div className="wrap">
           <div className="text-center mb-14">
             <span className="copper-line mx-auto mb-5" />
@@ -59,7 +59,7 @@ export default function Page() {
               { icon: "🍃", title: "Leaf Removal", desc: "Thorough fall cleanups to protect your lawn and leave your property spotless." },
               { icon: "🌸", title: "Seasonal Plantings", desc: "Seasonal color installations that refresh your curb appeal and thrive all season long." },
             ].map(s => (
-              <div key={s.title} className="bg-ink-950 p-8 hover:bg-ink-800 transition-colors">
+              <div key={s.title} className="bg-ink-900 p-8 hover:bg-ink-800 transition-colors">
                 <span className="text-3xl block mb-4">{s.icon}</span>
                 <h3 className="font-heading text-white text-lg font-semibold mb-2">{s.title}</h3>
                 <p className="text-white/50 text-sm leading-relaxed">{s.desc}</p>
@@ -71,7 +71,7 @@ export default function Page() {
 
       <section className="relative py-20">
         <Image src="/images/landscape-maint-2.jpeg" alt="Landscape maintenance" fill className="object-cover" />
-        <div className="absolute inset-0 bg-ink-950/80" />
+        <div className="absolute inset-0 bg-ink-900/78" />
         <div className="relative wrap-narrow text-center">
           <h2 className="section-title text-white mb-6">Start Your Maintenance Plan.</h2>
           <p className="body-md text-white/55 mb-8">Free on-site consultation. We will walk your property and build a custom plan around your exact needs.</p>

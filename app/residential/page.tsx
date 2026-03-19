@@ -16,9 +16,9 @@ const services = [
 export default function ResidentialPage() {
   return (
     <>
-      <section className="relative h-[65vh] min-h-[500px] flex items-end bg-ink-950">
+      <section className="relative h-[65vh] min-h-[500px] flex items-end bg-ink-900">
         <Image src="/images/residential-hero.jpeg" alt="Residential Landscaping" fill className="object-cover" priority />
-        <div className="absolute inset-0 bg-gradient-to-t from-ink-950/90 via-ink-950/40 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-ink-900/88 via-ink-950/40 to-transparent" />
         <div className="relative wrap pb-16">
           <p className="label text-copper-400 mb-3 flex items-center gap-3"><span className="w-8 h-px bg-copper-400"/>Services</p>
           <h1 className="section-title text-white mb-4">Residential<br/>Landscaping.</h1>

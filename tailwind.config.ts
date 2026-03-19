@@ -9,52 +9,52 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // Deep forest green — primary dark (replaces navy)
+        // Charcoal-green — dark base for nav, footer, overlays (NOT pure green)
         ink: {
-          50:  "#EEF5E8",
-          100: "#D4E8C4",
-          200: "#AACF8B",
-          300: "#80B655",
-          400: "#5A9B36",
-          500: "#3E7B1F",
-          600: "#306017",
-          700: "#234610",
-          800: "#172E09",
-          900: "#0D1C05",
-          950: "#070E02",
+          50:  "#F4F6F3",
+          100: "#E3E8DF",
+          200: "#C4CFC0",
+          300: "#9FB49A",
+          400: "#78976F",
+          500: "#567A4B",
+          600: "#415E37",
+          700: "#314529",
+          800: "#232F1E",
+          900: "#171F14",  // Rich dark charcoal-green — for nav/footer/overlays
+          950: "#0D1209",  // Near-black
         },
-        // Brand green — primary action/accent (replaces copper/orange)
+        // Brand green — primary accent, used sparingly
         copper: {
-          50:  "#EDFADF",
-          100: "#D3F2B4",
-          200: "#ADDF78",
-          300: "#88CC45",
-          400: "#68B530",
-          500: "#4D9A1E",  // Main brand green — close to logo
+          50:  "#EEF9E3",
+          100: "#D5F0BB",
+          200: "#AEDF7E",
+          300: "#87CB47",
+          400: "#66B42E",
+          500: "#4D9A1E",  // Main brand green — logo color
           600: "#3A7A15",
-          700: "#2A5C0D",
-          800: "#1B3F07",
-          900: "#0E2403",
+          700: "#2C5D0F",
+          800: "#1D3F09",
+          900: "#102404",
           950: "#060F01",
         },
-        // Warm sage — secondary accent
+        // Warm sage — secondary/soft green for subtle section accents
         sage: {
-          50:  "#F2F6F2",
-          100: "#DEE9DE",
-          200: "#BDD4BE",
-          300: "#9BBE9D",
-          400: "#7FA981",
-          500: "#628D64",
-          600: "#4D714F",
-          700: "#3A553B",
-          800: "#273A28",
-          900: "#152016",
+          50:  "#F2F5EF",
+          100: "#E2E9DC",
+          200: "#C4D3BB",
+          300: "#A3BC97",
+          400: "#82A473",
+          500: "#628D54",
+          600: "#4B6D3F",
+          700: "#38512F",
+          800: "#263820",
+          900: "#152013",
           950: "#0A100B",
         },
         // Backgrounds
-        parchment: "#F2F8EC",
-        stone:     "#E0EBD5",
-        chalk:     "#F8FCF5",
+        parchment: "#F8FAF6",   // Very light, near-white with faint green tint
+        stone:     "#EAEEe7",   // Soft gray-green for alternating sections
+        chalk:     "#FFFFFF",   // Pure white
       },
       fontFamily: {
         display: ["var(--font-bebas)", "Impact", "sans-serif"],

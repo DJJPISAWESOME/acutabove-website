@@ -86,9 +86,9 @@ export default function CareersPage() {
 
   return (
     <>
-      <section className="relative h-[55vh] min-h-[440px] flex items-end bg-ink-950">
+      <section className="relative h-[55vh] min-h-[440px] flex items-end bg-ink-900">
         <Image src="/images/careers-hero.jpg" alt="Careers at A Cut Above" fill className="object-cover" priority />
-        <div className="absolute inset-0 bg-gradient-to-t from-ink-950/88 via-ink-950/45 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-ink-900/88 via-ink-950/45 to-transparent" />
         <div className="relative wrap pb-16">
           <nav className="flex gap-2 text-xs text-white/40 mb-5">
             <Link href="/" className="hover:text-copper-400 transition-colors">Home</Link><span>/</span>
@@ -99,10 +99,10 @@ export default function CareersPage() {
         </div>
       </section>
 
-      <div className="bg-copper-500 py-5">
+      <div className="bg-ink-800 border-b border-white/10 py-4">
         <div className="wrap flex flex-wrap justify-center gap-6">
-          <span className="text-sm text-white font-heading font-semibold">🌿 Now hiring for spring — positions filling fast.</span>
-          <a href="#apply" className="text-xs font-heading font-semibold text-ink-900 bg-white px-4 py-2 hover:bg-parchment transition-colors">Apply Today</a>
+          <span className="text-sm text-white/75 font-heading font-medium">Now hiring for spring — positions filling fast.</span>
+          <a href="#apply" className="text-xs font-heading font-semibold text-white bg-copper-500 px-4 py-2 hover:bg-copper-600 transition-colors rounded-sm">Apply Today</a>
         </div>
       </div>
 
@@ -124,7 +124,7 @@ export default function CareersPage() {
         </div>
       </section>
 
-      <section className="section-pad bg-ink-950">
+      <section className="section-pad bg-ink-900">
         <div className="wrap">
           <div className="text-center mb-14">
             <span className="copper-line mx-auto mb-5" />
@@ -132,7 +132,7 @@ export default function CareersPage() {
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-px bg-white/10">
             {perks.map(p => (
-              <div key={p.title} className="bg-ink-950 hover:bg-ink-800 transition-colors p-8">
+              <div key={p.title} className="bg-ink-900 hover:bg-ink-800 transition-colors p-8">
                 <span className="text-3xl block mb-4">{p.icon}</span>
                 <h3 className="font-heading text-white text-lg font-semibold mb-2">{p.title}</h3>
                 <p className="text-white/50 text-sm leading-relaxed">{p.desc}</p>
@@ -202,7 +202,7 @@ export default function CareersPage() {
         </div>
       </section>
 
-      <section id="apply" className="section-pad bg-ink-950">
+      <section id="apply" className="section-pad bg-ink-900">
         <div className="wrap-narrow">
           <div className="text-center mb-12">
             <span className="copper-line mx-auto mb-5" />

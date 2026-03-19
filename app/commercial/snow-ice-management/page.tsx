@@ -7,9 +7,9 @@ export const metadata: Metadata = { title: "Snow & Ice Management", description:
 export default function Page() {
   return (
     <>
-      <section className="relative h-[65vh] min-h-[500px] flex items-end bg-ink-950">
+      <section className="relative h-[65vh] min-h-[500px] flex items-end bg-ink-900">
         <Image src="/images/snow.jpg" alt="Snow & Ice Management" fill className="object-cover" priority />
-        <div className="absolute inset-0 bg-gradient-to-t from-ink-950/92 via-ink-950/50 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-ink-900/92 via-ink-950/50 to-transparent" />
         <div className="relative wrap pb-16">
           <nav className="flex gap-2 text-xs text-white/40 mb-5">
             <Link href="/" className="hover:text-copper-400 transition-colors">Home</Link><span>/</span>
@@ -21,10 +21,10 @@ export default function Page() {
         </div>
       </section>
 
-      <div className="bg-copper-500 py-5">
+      <div className="bg-ink-800 border-b border-white/10 py-4">
         <div className="wrap flex flex-wrap justify-center gap-6">
-          <span className="text-sm text-white font-heading font-semibold">❄️ Spots are limited — secure your winter service agreement now.</span>
-          <Link href="/contact" className="text-xs font-heading font-semibold text-ink-900 bg-white px-4 py-2 hover:bg-parchment transition-colors">Get Winter Coverage</Link>
+          <span className="text-sm text-white/75 font-heading font-medium">Spots are limited — secure your winter service agreement now.</span>
+          <Link href="/contact" className="text-xs font-heading font-semibold text-white bg-copper-500 px-4 py-2 hover:bg-copper-600 transition-colors rounded-sm">Get Winter Coverage</Link>
         </div>
       </div>
 
@@ -37,7 +37,7 @@ export default function Page() {
             <p className="body-md text-ink-500 mb-8">Our crews are dispatched based on pre-defined accumulation thresholds in your service agreement — so your property is plowed and safe before you or your employees arrive.</p>
             <Link href="/contact" className="btn-primary py-4 px-8">Get Winter Coverage</Link>
           </div>
-          <div className="bg-ink-950 p-10">
+          <div className="bg-ink-900 p-10">
             <div className="space-y-8">
               {[{ v: "24/7", l: "Storm monitoring & dispatch" }, { v: "10+", l: "Winters of commercial experience" }, { v: "100%", l: "Fully insured coverage" }].map(s => (
                 <div key={s.v} className="border-b border-white/10 pb-8 last:border-0 last:pb-0">
@@ -50,7 +50,7 @@ export default function Page() {
         </div>
       </section>
 
-      <section className="section-pad bg-ink-950">
+      <section className="section-pad bg-ink-900">
         <div className="wrap grid sm:grid-cols-2 lg:grid-cols-3 gap-px bg-white/10">
           {[
             { icon: "🚜", title: "Snow Plowing", desc: "Fast, thorough plowing of parking lots, access roads, and drive lanes." },
@@ -60,7 +60,7 @@ export default function Page() {
             { icon: "📱", title: "Real-Time Monitoring", desc: "We track weather 24/7 and dispatch crews based on accumulation triggers." },
             { icon: "📋", title: "Seasonal Agreements", desc: "Per-event or seasonal contracts. Seasonal pricing provides budget certainty." },
           ].map(s => (
-            <div key={s.title} className="bg-ink-950 hover:bg-ink-800 transition-colors p-8">
+            <div key={s.title} className="bg-ink-900 hover:bg-ink-800 transition-colors p-8">
               <span className="text-3xl block mb-4">{s.icon}</span>
               <h3 className="font-heading text-white text-lg font-semibold mb-2">{s.title}</h3>
               <p className="text-white/50 text-sm leading-relaxed">{s.desc}</p>
@@ -69,11 +69,11 @@ export default function Page() {
         </div>
       </section>
 
-      <section className="section-pad bg-copper-500">
+      <section className="section-pad bg-parchment border-t border-stone">
         <div className="wrap-narrow text-center">
-          <h2 className="section-title text-white mb-5">Secure Your Winter Coverage.</h2>
-          <p className="body-md text-white/80 mb-8">Service agreements fill up fast. Contact us today for a free site review and seasonal pricing.</p>
-          <Link href="/contact" className="btn-ink py-4 px-10">Get Winter Coverage</Link>
+          <h2 className="section-title text-ink-900 mb-5">Secure Your Winter Coverage.</h2>
+          <p className="body-md text-ink-500 mb-8">Service agreements fill up fast. Contact us today for a free site review and seasonal pricing.</p>
+          <Link href="/contact" className="btn-primary py-4 px-10">Get Winter Coverage</Link>
         </div>
       </section>
     </>

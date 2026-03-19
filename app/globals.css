@@ -11,7 +11,7 @@
     --font-dm-sans: 'DM Sans';
   }
   html { scroll-behavior: smooth; }
-  body { @apply font-body text-ink-900 bg-chalk antialiased; }
+  body { @apply font-body text-ink-900 bg-white antialiased; }
   h1, h2, h3 { @apply font-heading; }
 }
 
@@ -19,36 +19,33 @@
 
   /* ── Buttons ── */
   .btn-primary {
-    @apply inline-flex items-center gap-2.5 px-8 py-4 bg-copper-500 text-white font-heading font-semibold text-sm tracking-widest uppercase transition-all duration-300 hover:bg-copper-600 hover:shadow-lg hover:shadow-copper-500/25 active:scale-[0.98];
+    @apply inline-flex items-center gap-2 px-7 py-3.5 bg-copper-500 text-white font-heading font-semibold text-sm tracking-widest uppercase transition-all duration-200 hover:bg-copper-600 hover:shadow-md hover:shadow-copper-500/20 active:scale-[0.98];
   }
   .btn-outline-light {
-    @apply inline-flex items-center gap-2.5 px-8 py-4 border-2 border-white/60 text-white font-heading font-semibold text-sm tracking-widest uppercase transition-all duration-300 hover:bg-white hover:text-ink-900 hover:border-white;
+    @apply inline-flex items-center gap-2 px-7 py-3.5 border-2 border-white/60 text-white font-heading font-semibold text-sm tracking-widest uppercase transition-all duration-200 hover:bg-white hover:text-ink-900 hover:border-white;
   }
   .btn-outline-dark {
-    @apply inline-flex items-center gap-2.5 px-8 py-4 border-2 border-ink-800 text-ink-800 font-heading font-semibold text-sm tracking-widest uppercase transition-all duration-300 hover:bg-ink-800 hover:text-white;
+    @apply inline-flex items-center gap-2 px-7 py-3.5 border-2 border-ink-800 text-ink-800 font-heading font-semibold text-sm tracking-widest uppercase transition-all duration-200 hover:bg-ink-800 hover:text-white;
   }
   .btn-ink {
-    @apply inline-flex items-center gap-2.5 px-8 py-4 bg-ink-900 text-white font-heading font-semibold text-sm tracking-widest uppercase transition-all duration-300 hover:bg-ink-700 active:scale-[0.98];
-  }
-  .btn-sage {
-    @apply inline-flex items-center gap-2.5 px-8 py-4 bg-sage-600 text-white font-heading font-semibold text-sm tracking-widest uppercase transition-all duration-300 hover:bg-sage-700 active:scale-[0.98];
+    @apply inline-flex items-center gap-2 px-7 py-3.5 bg-ink-900 text-white font-heading font-semibold text-sm tracking-widest uppercase transition-all duration-200 hover:bg-ink-700 active:scale-[0.98];
   }
 
-  /* ── Typography ── */
+  /* ── Typography — toned down from aggressive sizes ── */
   .label {
     @apply font-heading text-[10px] font-semibold tracking-[0.4em] uppercase;
   }
   .hero-xl {
-    @apply font-display text-[clamp(72px,12vw,160px)] leading-none tracking-wide uppercase;
-  }
-  .hero-lg {
     @apply font-display text-[clamp(52px,8vw,110px)] leading-none tracking-wide uppercase;
   }
+  .hero-lg {
+    @apply font-display text-[clamp(40px,6vw,88px)] leading-none tracking-wide uppercase;
+  }
   .section-title {
-    @apply font-display text-[clamp(42px,6vw,80px)] leading-none tracking-wide uppercase;
+    @apply font-display text-[clamp(34px,4.5vw,64px)] leading-none tracking-wide uppercase;
   }
   .card-title {
-    @apply font-heading text-2xl font-bold leading-tight;
+    @apply font-heading text-xl font-bold leading-tight;
   }
   .body-lg {
     @apply font-body text-lg leading-relaxed;
@@ -59,7 +56,7 @@
 
   /* ── Layout ── */
   .section-pad {
-    @apply py-20 md:py-28 lg:py-36;
+    @apply py-16 md:py-24 lg:py-28;
   }
   .wrap {
     @apply max-w-7xl mx-auto px-5 sm:px-8 lg:px-12;
@@ -70,30 +67,22 @@
 
   /* ── Accent line ── */
   .copper-line {
-    @apply block w-14 h-[3px] bg-copper-500;
+    @apply block w-12 h-[2px] bg-copper-500;
   }
 
   /* ── Form inputs ── */
   .field {
-    @apply w-full bg-white border-b-2 border-stone px-0 py-3 text-sm text-ink-900 placeholder-ink-300 focus:outline-none focus:border-copper-500 transition-colors bg-transparent;
+    @apply w-full bg-white border border-stone px-4 py-3 text-sm text-ink-900 placeholder-ink-300 focus:outline-none focus:border-copper-500 transition-colors rounded-sm;
   }
   .field-label {
-    @apply block text-[10px] font-heading font-semibold text-ink-400 tracking-[0.3em] uppercase mb-1;
+    @apply block text-[10px] font-heading font-semibold text-ink-500 tracking-[0.3em] uppercase mb-1.5;
   }
 }
 
 /* ── Scrollbar ── */
 ::-webkit-scrollbar { width: 4px; }
-::-webkit-scrollbar-track { background: #F2F8EC; }
+::-webkit-scrollbar-track { background: #F8FAF6; }
 ::-webkit-scrollbar-thumb { background: #4D9A1E; }
 
 /* ── Image fade-in ── */
 img { transition: opacity 0.3s ease; }
-
-/* ── Clip paths for angled sections ── */
-.clip-slant-down {
-  clip-path: polygon(0 0, 100% 0, 100% 92%, 0 100%);
-}
-.clip-slant-up {
-  clip-path: polygon(0 8%, 100% 0, 100% 100%, 0 100%);
-}

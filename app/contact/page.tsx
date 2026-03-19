@@ -7,9 +7,9 @@ export const metadata: Metadata = { title: "Contact Us", description: "Request a
 export default function Page() {
   return (
     <>
-      <section className="relative h-[45vh] min-h-[360px] flex items-end bg-ink-950">
+      <section className="relative h-[45vh] min-h-[360px] flex items-end bg-ink-900">
         <Image src="/images/commercial-2.jpg" alt="Contact" fill className="object-cover" priority />
-        <div className="absolute inset-0 bg-gradient-to-t from-ink-950/92 via-ink-950/50 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-ink-900/92 via-ink-950/50 to-transparent" />
         <div className="relative wrap pb-14">
           <nav className="flex gap-2 text-xs text-white/40 mb-5">
             <Link href="/" className="hover:text-copper-400 transition-colors">Home</Link><span>/</span>
@@ -73,7 +73,7 @@ export default function Page() {
               </div>
             </div>
 
-            <div className="bg-ink-950 p-6">
+            <div className="bg-ink-900 p-6">
               <p className="font-heading text-white font-semibold mb-2">Already a client?</p>
               <p className="text-white/50 text-sm mb-4">Log in to your client portal to view invoices, approve estimates, and manage your account.</p>
               <a href="https://clienthub.getjobber.com/client_hubs/642fdd6d-d859-4d28-83c3-314377e6f47d/login/new?source=share_login" target="_blank" rel="noopener noreferrer" className="btn-primary py-2 px-5 text-xs">Client Login</a>
@@ -82,7 +82,7 @@ export default function Page() {
 
           <div className="lg:col-span-2">
             <div className="bg-white shadow-sm">
-              <div className="bg-ink-950 px-8 py-5">
+              <div className="bg-ink-900 px-8 py-5">
                 <h3 className="font-heading text-white font-semibold text-lg">Request a Free Estimate</h3>
                 <p className="text-white/50 text-sm mt-1">Complete the form below and we&apos;ll prepare a custom proposal for your property.</p>
               </div>
@@ -101,7 +101,7 @@ export default function Page() {
         </div>
       </section>
 
-      <section className="section-pad bg-ink-950">
+      <section className="section-pad bg-ink-900">
         <div className="wrap">
           <div className="text-center mb-12">
             <span className="copper-line mx-auto mb-5" />

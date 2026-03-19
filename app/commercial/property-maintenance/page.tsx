@@ -7,9 +7,9 @@ export const metadata: Metadata = { title: "Commercial Property Maintenance", de
 export default function Page() {
   return (
     <>
-      <section className="relative h-[60vh] min-h-[460px] flex items-end bg-ink-950">
+      <section className="relative h-[60vh] min-h-[460px] flex items-end bg-ink-900">
         <Image src="/images/prop-maint-1.jpg" alt="Property Maintenance" fill className="object-cover" priority />
-        <div className="absolute inset-0 bg-gradient-to-t from-ink-950/90 via-ink-950/40 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-ink-900/88 via-ink-950/40 to-transparent" />
         <div className="relative wrap pb-16">
           <nav className="flex gap-2 text-xs text-white/40 mb-5">
             <Link href="/" className="hover:text-copper-400 transition-colors">Home</Link><span>/</span>
@@ -36,7 +36,7 @@ export default function Page() {
         </div>
       </section>
 
-      <section className="section-pad bg-ink-950">
+      <section className="section-pad bg-ink-900">
         <div className="wrap">
           <div className="text-center mb-14">
             <span className="copper-line mx-auto mb-5" />
@@ -50,7 +50,7 @@ export default function Page() {
               { name: "Fall", icon: "🍂", items: ["Leaf removal & cleanup", "Fall color plantings", "Lawn overseeding", "Shrub prep for winter", "Bed cleanup", "Irrigation winterization"] },
               { name: "Winter", icon: "❄️", items: ["24/7 storm monitoring", "Snow plowing & removal", "Salting & de-icing", "Sidewalk clearing", "Post-storm inspection", "Damage assessment"] },
             ].map(s => (
-              <div key={s.name} className="bg-ink-950 p-7 hover:bg-ink-800 transition-colors">
+              <div key={s.name} className="bg-ink-900 p-7 hover:bg-ink-800 transition-colors">
                 <span className="text-3xl block mb-3">{s.icon}</span>
                 <h3 className="font-heading text-white text-lg font-semibold mb-4 pb-3 border-b border-white/10">{s.name}</h3>
                 <ul className="space-y-2">
@@ -62,11 +62,11 @@ export default function Page() {
         </div>
       </section>
 
-      <section className="section-pad bg-copper-500">
+      <section className="section-pad bg-parchment border-t border-stone">
         <div className="wrap-narrow text-center">
-          <h2 className="section-title text-white mb-5">Build Your Maintenance Program.</h2>
-          <p className="body-md text-white/80 mb-8">Free property walkthrough and custom proposal.</p>
-          <Link href="/contact" className="btn-ink py-4 px-10">Get Your Free Proposal</Link>
+          <h2 className="section-title text-ink-900 mb-5">Build Your Maintenance Program.</h2>
+          <p className="body-md text-ink-500 mb-8">Free property walkthrough and custom proposal.</p>
+          <Link href="/contact" className="btn-primary py-4 px-10">Get Your Free Proposal</Link>
         </div>
       </section>
     </>

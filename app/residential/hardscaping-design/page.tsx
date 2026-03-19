@@ -16,9 +16,9 @@ const features = [
 export default function Page() {
   return (
     <>
-      <section className="relative h-[65vh] min-h-[500px] flex items-end bg-ink-950">
+      <section className="relative h-[65vh] min-h-[500px] flex items-end bg-ink-900">
         <Image src="/images/hardscaping-hero.jpg" alt="Hardscaping" fill className="object-cover object-center" priority />
-        <div className="absolute inset-0 bg-gradient-to-t from-ink-950/90 via-ink-950/40 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-ink-900/88 via-ink-950/40 to-transparent" />
         <div className="relative wrap pb-16">
           <nav className="flex gap-2 text-xs text-white/40 mb-5">
             <Link href="/" className="hover:text-copper-400 transition-colors">Home</Link><span>/</span>
@@ -72,11 +72,11 @@ export default function Page() {
         </div>
       </section>
 
-      <section className="section-pad bg-copper-500">
+      <section className="section-pad bg-parchment border-t border-stone">
         <div className="wrap-narrow text-center">
-          <h2 className="section-title text-white mb-5">Build Something Beautiful.</h2>
-          <p className="body-md text-white/80 mb-8">Contact us for a free design consultation and detailed estimate.</p>
-          <Link href="/contact" className="btn-ink py-4 px-10">Book Free Consultation</Link>
+          <h2 className="section-title text-ink-900 mb-5">Build Something Beautiful.</h2>
+          <p className="body-md text-ink-500 mb-8">Contact us for a free design consultation and detailed estimate.</p>
+          <Link href="/contact" className="btn-primary py-4 px-10">Book Free Consultation</Link>
         </div>
       </section>
     </>

@@ -7,9 +7,9 @@ export const metadata: Metadata = { title: "Light Excavation", description: "Res
 export default function Page() {
   return (
     <>
-      <section className="relative h-[60vh] min-h-[460px] flex items-end bg-ink-950">
+      <section className="relative h-[60vh] min-h-[460px] flex items-end bg-ink-900">
         <Image src="/images/light-excav.jpg" alt="Light Excavation" fill className="object-cover" priority />
-        <div className="absolute inset-0 bg-gradient-to-t from-ink-950/90 via-ink-950/40 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-ink-900/88 via-ink-950/40 to-transparent" />
         <div className="relative wrap pb-16">
           <nav className="flex gap-2 text-xs text-white/40 mb-5">
             <Link href="/" className="hover:text-copper-400 transition-colors">Home</Link><span>/</span>
@@ -37,7 +37,7 @@ export default function Page() {
         </div>
       </section>
 
-      <section className="section-pad bg-ink-950">
+      <section className="section-pad bg-ink-900">
         <div className="wrap grid sm:grid-cols-2 lg:grid-cols-3 gap-px bg-white/10">
           {[
             { icon: "📐", title: "Grading & Leveling", desc: "Proper grading ensures water drains away from your home and creates a stable, level surface." },
@@ -47,7 +47,7 @@ export default function Page() {
             { icon: "🌲", title: "Land Clearing", desc: "Clear brush, stumps, and vegetation to open up space. Debris hauled away clean." },
             { icon: "🏠", title: "Foundation Prep", desc: "Excavation for sheds, small additions, retaining walls, and other structures." },
           ].map(s => (
-            <div key={s.title} className="bg-ink-950 hover:bg-ink-800 transition-colors p-8">
+            <div key={s.title} className="bg-ink-900 hover:bg-ink-800 transition-colors p-8">
               <span className="text-3xl block mb-4">{s.icon}</span>
               <h3 className="font-heading text-white text-lg font-semibold mb-2">{s.title}</h3>
               <p className="text-white/50 text-sm leading-relaxed">{s.desc}</p>
@@ -56,11 +56,11 @@ export default function Page() {
         </div>
       </section>
 
-      <section className="section-pad bg-copper-500">
+      <section className="section-pad bg-parchment border-t border-stone">
         <div className="wrap-narrow text-center">
-          <h2 className="section-title text-white mb-5">Start Your Project Right.</h2>
-          <p className="body-md text-white/80 mb-8">Free site evaluation and estimate. We will walk the property and provide a clear, honest plan.</p>
-          <Link href="/contact" className="btn-ink py-4 px-10">Get Your Free Estimate</Link>
+          <h2 className="section-title text-ink-900 mb-5">Start Your Project Right.</h2>
+          <p className="body-md text-ink-500 mb-8">Free site evaluation and estimate. We will walk the property and provide a clear, honest plan.</p>
+          <Link href="/contact" className="btn-primary py-4 px-10">Get Your Free Estimate</Link>
         </div>
       </section>
     </>
