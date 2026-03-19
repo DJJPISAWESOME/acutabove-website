@@ -63,7 +63,7 @@ export default function Navbar() {
       {/* Main nav */}
       <nav className="wrap flex items-center justify-between py-3" ref={dropdownRef}>
         <Link href="/" className="flex-shrink-0" onClick={() => setOpen(false)}>
-          <Image src="/images/logo.png" alt="A Cut Above" width={140} height={93} className="h-11 w-auto" priority />
+          <Image src="/images/logo.png" alt="A Cut Above" width={180} height={120} className="h-16 w-auto" priority />
         </Link>
 
         {/* Desktop links */}

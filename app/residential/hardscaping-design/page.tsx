@@ -5,12 +5,12 @@ import Link from "next/link";
 export const metadata: Metadata = { title: "Hardscaping & Design", description: "Custom hardscaping and outdoor design in Massachusetts." };
 
 const features = [
-  { title: "Fire Pits & Fireplaces", img: "/images/hardscaping-5.jpg", desc: "Custom-built fire features that become the heart of your outdoor space." },
-  { title: "Patios & Outdoor Living", img: "/images/hardscaping-hero.jpg", desc: "Expand your living space with a beautifully crafted patio using premium materials." },
-  { title: "Retaining Walls", img: "/images/hardscaping-6.jpg", desc: "Structural and decorative walls that manage slope and add beauty to your landscape." },
-  { title: "Outdoor Kitchens", img: "/images/hardscaping-2.jpg", desc: "Fully equipped outdoor kitchens built to rival your indoor setup." },
-  { title: "Walkways & Steps", img: "/images/hardscaping-3.jpg", desc: "Welcoming paths and custom steps crafted from natural stone or premium pavers." },
-  { title: "Custom Borders", img: "/images/hardscaping-4.jpg", desc: "Crisp stone borders that define beds, pathways, and lawn areas with precision." },
+  { title: "Fire Pits & Fireplaces", img: "/images/hardscaping-3.jpg", desc: "Custom-built fire features that become the heart of your outdoor space." },
+  { title: "Patios & Outdoor Living", img: "/images/hardscaping-5.jpg", desc: "Expand your living space with a beautifully crafted patio using premium materials." },
+  { title: "Retaining Walls", img: "/images/hardscaping-2.jpg", desc: "Structural and decorative walls that manage slope and add beauty to your landscape." },
+  { title: "Outdoor Kitchens", img: "/images/hardscaping-4.jpg", desc: "Fully equipped outdoor kitchens built to rival your indoor setup." },
+  { title: "Walkways & Steps", img: "/images/gallery-3.jpg", desc: "Welcoming paths and custom steps crafted from natural stone or premium pavers." },
+  { title: "Landscape Lighting", img: "/images/hardscaping-6.jpg", desc: "Professional outdoor lighting that showcases your property and extends your outdoor time." },
 ];
 
 export default function Page() {
@@ -25,7 +25,7 @@ export default function Page() {
             <Link href="/residential" className="hover:text-copper-400 transition-colors">Residential</Link><span>/</span>
             <span className="text-copper-400">Hardscaping & Design</span>
           </nav>
-          <h1 className="section-title text-white">Hardscaping<br/>& Design.</h1>
+          <h1 className="page-title text-white">Hardscaping<br/>& Design.</h1>
           <p className="body-lg text-white/60 max-w-xl mt-4">Structures as beautiful as they are durable — built to last a lifetime.</p>
         </div>
       </section>

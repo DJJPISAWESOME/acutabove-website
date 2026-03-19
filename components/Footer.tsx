@@ -26,7 +26,7 @@ export default function Footer() {
       <div className="wrap py-14 grid grid-cols-2 md:grid-cols-4 gap-10">
         {/* Brand */}
         <div className="col-span-2 md:col-span-1">
-          <Image src="/images/logo.png" alt="A Cut Above" width={130} height={87} className="h-12 w-auto mb-5 brightness-0 invert" />
+          <Image src="/images/logo.png" alt="A Cut Above" width={160} height={107} className="h-16 w-auto mb-5" />
           <p className="text-white/45 text-sm leading-relaxed">
             Professional landscaping, hardscaping, excavation &amp; snow management across 15+ Massachusetts communities.
           </p>

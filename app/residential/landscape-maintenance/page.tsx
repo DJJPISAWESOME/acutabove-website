@@ -17,7 +17,7 @@ export default function Page() {
             <span className="text-copper-400">Landscape Maintenance</span>
           </nav>
           <p className="label text-copper-400 mb-3">Residential Services</p>
-          <h1 className="section-title text-white">Landscape<br/>Maintenance.</h1>
+          <h1 className="page-title text-white">Landscape<br/>Maintenance.</h1>
         </div>
       </section>
 
@@ -48,7 +48,7 @@ export default function Page() {
           <div className="text-center mb-14">
             <span className="copper-line mx-auto mb-5" />
             <p className="label text-copper-400 mb-3">What Is Included</p>
-            <h2 className="section-title text-white">Our Services.</h2>
+            <h2 className="page-title text-white">Our Services.</h2>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-px bg-white/10">
             {[

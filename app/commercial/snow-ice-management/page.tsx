@@ -16,7 +16,7 @@ export default function Page() {
             <Link href="/commercial" className="hover:text-copper-400 transition-colors">Commercial</Link><span>/</span>
             <span className="text-copper-400">Snow & Ice Management</span>
           </nav>
-          <h1 className="section-title text-white">Snow & Ice<br/>Management.</h1>
+          <h1 className="page-title text-white">Snow & Ice<br/>Management.</h1>
           <p className="body-lg text-white/60 max-w-xl mt-4">24/7 coverage that keeps your business open all winter — no matter what the forecast brings.</p>
         </div>
       </section>

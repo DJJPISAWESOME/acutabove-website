@@ -94,7 +94,7 @@ export default function CareersPage() {
             <Link href="/" className="hover:text-copper-400 transition-colors">Home</Link><span>/</span>
             <span className="text-copper-400">Careers</span>
           </nav>
-          <h1 className="section-title text-white">Join Our<br/>Team.</h1>
+          <h1 className="page-title text-white">Join Our<br/>Team.</h1>
           <p className="body-lg text-white/60 max-w-xl mt-4">We&apos;re hiring hardworking people who take pride in their craft. Competitive pay, real growth, and a team that has your back.</p>
         </div>
       </section>
@@ -128,7 +128,7 @@ export default function CareersPage() {
         <div className="wrap">
           <div className="text-center mb-14">
             <span className="copper-line mx-auto mb-5" />
-            <h2 className="section-title text-white">What We Offer.</h2>
+            <h2 className="page-title text-white">What We Offer.</h2>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-px bg-white/10">
             {perks.map(p => (

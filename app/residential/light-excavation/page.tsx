@@ -16,7 +16,7 @@ export default function Page() {
             <Link href="/residential" className="hover:text-copper-400 transition-colors">Residential</Link><span>/</span>
             <span className="text-copper-400">Light Excavation</span>
           </nav>
-          <h1 className="section-title text-white">Light<br/>Excavation.</h1>
+          <h1 className="page-title text-white">Light<br/>Excavation.</h1>
           <p className="body-lg text-white/60 max-w-xl mt-4">Precision earthwork done right the first time.</p>
         </div>
       </section>

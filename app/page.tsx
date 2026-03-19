@@ -18,10 +18,16 @@ const services = [
 ];
 
 const gallery = [
-  { src: "/images/hardscaping-hero.jpg", alt: "Outdoor living space with patio, pool, and landscape lighting" },
-  { src: "/images/residential-hero.jpeg", alt: "Professional lawn mowing service at a residential property" },
-  { src: "/images/hardscaping-2.jpg", alt: "Custom hardscape patio and retaining wall installation" },
+  { src: "/images/hardscaping-hero.jpg", alt: "Nighttime pool patio with outdoor living space and landscape lighting" },
+  { src: "/images/hardscaping-5.jpg", alt: "Custom pool patio with outdoor bar and paver surround" },
+  { src: "/images/gallery-1.jpg", alt: "Stone patio with natural boulder retaining wall and plantings" },
+  { src: "/images/gallery-3.jpg", alt: "Curved paver walkway with new plant and mulch bed installation" },
+  { src: "/images/hardscaping-3.jpg", alt: "Custom fire pit with granite cap and built-in seating wall" },
+  { src: "/images/hardscaping-4.jpg", alt: "Outdoor kitchen and bar with stone base and paver patio" },
+  { src: "/images/lawn-mower.jpg", alt: "Professional lawn mowing service at a residential property" },
   { src: "/images/light-excav.jpg", alt: "Excavation and drainage work at a residential site" },
+  { src: "/images/gallery-4.jpg", alt: "A Cut Above CAT excavator and dump truck on a light excavation job" },
+  { src: "/images/gallery-5.jpg", alt: "Natural boulder retaining wall with crushed stone drainage" },
   { src: "/images/snow.jpg", alt: "Commercial snow removal with loader at night" },
   { src: "/images/prop-maint-1.jpg", alt: "Commercial property landscape maintenance" },
 ];

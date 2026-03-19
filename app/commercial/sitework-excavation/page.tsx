@@ -16,7 +16,7 @@ export default function Page() {
             <Link href="/commercial" className="hover:text-copper-400 transition-colors">Commercial</Link><span>/</span>
             <span className="text-copper-400">Sitework & Excavation</span>
           </nav>
-          <h1 className="section-title text-white">Sitework &<br/>Excavation.</h1>
+          <h1 className="page-title text-white">Sitework &<br/>Excavation.</h1>
           <p className="body-lg text-white/60 max-w-xl mt-4">Large-scale commercial earthwork executed with precision, professionalism, and full compliance.</p>
         </div>
       </section>

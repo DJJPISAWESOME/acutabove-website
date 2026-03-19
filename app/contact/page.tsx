@@ -15,7 +15,7 @@ export default function Page() {
             <Link href="/" className="hover:text-copper-400 transition-colors">Home</Link><span>/</span>
             <span className="text-copper-400">Contact</span>
           </nav>
-          <h1 className="section-title text-white">Get In<br/>Touch.</h1>
+          <h1 className="page-title text-white">Get In<br/>Touch.</h1>
           <p className="body-lg text-white/60 max-w-xl mt-4">Request a free estimate, ask a question, or get started with a service agreement.</p>
         </div>
       </section>

@@ -16,7 +16,7 @@ export default function Page() {
             <Link href="/commercial" className="hover:text-copper-400 transition-colors">Commercial</Link><span>/</span>
             <span className="text-copper-400">Property Maintenance</span>
           </nav>
-          <h1 className="section-title text-white">Property<br/>Maintenance.</h1>
+          <h1 className="page-title text-white">Property<br/>Maintenance.</h1>
         </div>
       </section>
 
@@ -41,7 +41,7 @@ export default function Page() {
           <div className="text-center mb-14">
             <span className="copper-line mx-auto mb-5" />
             <p className="label text-copper-400 mb-3">Year-Round Coverage</p>
-            <h2 className="section-title text-white">Service By Season.</h2>
+            <h2 className="page-title text-white">Service By Season.</h2>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-px bg-white/10">
             {[
