@@ -8,7 +8,7 @@ export default function Page() {
   return (
     <>
       <section className="relative h-[65vh] min-h-[500px] flex items-end bg-ink-950">
-        <Image src="/images/commercial-hero.jpg" alt="Sitework & Excavation" fill className="object-cover" priority />
+        <Image src="/images/commercial-5.jpg" alt="Commercial sitework and excavation" fill className="object-cover" priority />
         <div className="absolute inset-0 bg-gradient-to-t from-ink-950/90 via-ink-950/40 to-transparent" />
         <div className="relative wrap pb-16">
           <nav className="flex gap-2 text-xs text-white/40 mb-5">
@@ -31,7 +31,7 @@ export default function Page() {
             <Link href="/contact" className="btn-primary py-4 px-8">Request a Project Bid</Link>
           </div>
           <div className="relative h-[460px]">
-            <Image src="/images/commercial-5.jpg" alt="Excavation" fill className="object-cover" />
+            <Image src="/images/about-2.jpg" alt="Excavator at work on a commercial site" fill className="object-cover" />
             <div className="absolute bottom-6 right-6 bg-copper-500 p-5">
               <p className="font-display text-4xl text-white leading-none">10+</p>
               <p className="text-xs font-heading text-white/80 tracking-widest uppercase mt-1">Years Commercial Experience</p>

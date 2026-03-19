@@ -10,7 +10,7 @@ const openings = [
     title: "Landscape Maintenance Technician",
     type: "Full-Time / Seasonal",
     pay: "$17 – $25/hr",
-    location: "Mendon, MA (Field-Based)",
+    location: "Franklin, MA (Field-Based)",
     desc: "Join our residential and commercial landscape maintenance crews. You'll be responsible for mowing, edging, mulching, pruning, and general grounds care across a variety of properties.",
     responsibilities: [
       "Operate mowers, trimmers, blowers, and other landscape equipment",
@@ -21,7 +21,7 @@ const openings = [
     ],
     requirements: [
       "Valid driver's license (required)",
-      "Reliable transportation to our yard in Mendon",
+      "Reliable transportation to our yard in Franklin",
       "Physical ability to perform outdoor labor in all weather conditions",
       "Prior landscaping experience preferred but not required — we will train",
       "Strong work ethic and positive team attitude",
@@ -32,7 +32,7 @@ const openings = [
     title: "Hardscape Installer",
     type: "Full-Time",
     pay: "$22 – $30/hr",
-    location: "Mendon, MA (Field-Based)",
+    location: "Franklin, MA (Field-Based)",
     desc: "Work alongside our hardscape team to build patios, retaining walls, walkways, fire pits, and outdoor living spaces. Hands-on construction work with real opportunities to grow.",
     responsibilities: [
       "Install pavers, natural stone, retaining wall blocks, and related materials",
@@ -54,7 +54,7 @@ const openings = [
     title: "Snow Removal Crew Member",
     type: "Seasonal (Winter)",
     pay: "$18 – $26/hr",
-    location: "Mendon, MA (Field-Based)",
+    location: "Franklin, MA (Field-Based)",
     desc: "Winter crew positions available for snow plowing, salting, and shoveling at commercial properties. Early morning, on-call work during storm events with competitive hourly pay.",
     responsibilities: [
       "Operate snow plow trucks on assigned routes",

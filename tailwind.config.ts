@@ -9,35 +9,35 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // Deep slate navy — primary dark
+        // Deep forest green — primary dark (replaces navy)
         ink: {
-          50:  "#EEF0F3",
-          100: "#CDD3DB",
-          200: "#9BAAB8",
-          300: "#6A8094",
-          400: "#3D5A71",
-          500: "#1E3A52",
-          600: "#162D42",
-          700: "#0F2133",
-          800: "#091626",
-          900: "#060E1C",
-          950: "#030810",
+          50:  "#EEF5E8",
+          100: "#D4E8C4",
+          200: "#AACF8B",
+          300: "#80B655",
+          400: "#5A9B36",
+          500: "#3E7B1F",
+          600: "#306017",
+          700: "#234610",
+          800: "#172E09",
+          900: "#0D1C05",
+          950: "#070E02",
         },
-        // Rich copper — primary accent
+        // Brand green — primary action/accent (replaces copper/orange)
         copper: {
-          50:  "#FDF4EE",
-          100: "#FAE3CE",
-          200: "#F5C49E",
-          300: "#EFA070",
-          400: "#E07A40",
-          500: "#C4612A",
-          600: "#A34D1D",
-          700: "#7E3A10",
-          800: "#582807",
-          900: "#321503",
-          950: "#1A0A00",
+          50:  "#EDFADF",
+          100: "#D3F2B4",
+          200: "#ADDF78",
+          300: "#88CC45",
+          400: "#68B530",
+          500: "#4D9A1E",  // Main brand green — close to logo
+          600: "#3A7A15",
+          700: "#2A5C0D",
+          800: "#1B3F07",
+          900: "#0E2403",
+          950: "#060F01",
         },
-        // Soft sage green — secondary accent
+        // Warm sage — secondary accent
         sage: {
           50:  "#F2F6F2",
           100: "#DEE9DE",
@@ -51,15 +51,15 @@ const config: Config = {
           900: "#152016",
           950: "#0A100B",
         },
-        // Warm parchment backgrounds
-        parchment: "#F7F2EA",
-        stone: "#E5D9C8",
-        chalk: "#FDFAF5",
+        // Backgrounds
+        parchment: "#F2F8EC",
+        stone:     "#E0EBD5",
+        chalk:     "#F8FCF5",
       },
       fontFamily: {
         display: ["var(--font-bebas)", "Impact", "sans-serif"],
         heading: ["var(--font-outfit)", "system-ui", "sans-serif"],
-        body: ["var(--font-dm-sans)", "system-ui", "sans-serif"],
+        body:    ["var(--font-dm-sans)", "system-ui", "sans-serif"],
       },
     },
   },

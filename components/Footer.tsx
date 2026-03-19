@@ -73,7 +73,7 @@ export default function Footer() {
           </ul>
           <p className="text-[10px] font-heading font-semibold tracking-[0.35em] uppercase text-copper-400 mb-3">Service Areas</p>
           <p className="text-xs text-white/40 leading-relaxed">
-            Mendon · Milford · Norfolk · Hopedale · Sherborn · Wrentham · Holliston · Bellingham · Dover · Medway · Franklin · Medfield · Blackstone
+            Franklin · Milford · Norfolk · Hopedale · Sherborn · Wrentham · Holliston · Bellingham · Dover · Medway · Franklin · Medfield · Blackstone
           </p>
           <p className="text-[10px] font-heading font-semibold tracking-[0.35em] uppercase text-copper-400 mt-4 mb-2">Hours</p>
           <p className="text-xs text-white/40">Mon–Fri: 8:00 AM – 5:00 PM</p>

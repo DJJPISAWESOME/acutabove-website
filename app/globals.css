@@ -84,8 +84,8 @@
 
 /* ── Scrollbar ── */
 ::-webkit-scrollbar { width: 4px; }
-::-webkit-scrollbar-track { background: #F7F2EA; }
-::-webkit-scrollbar-thumb { background: #C4612A; }
+::-webkit-scrollbar-track { background: #F2F8EC; }
+::-webkit-scrollbar-thumb { background: #4D9A1E; }
 
 /* ── Image fade-in ── */
 img { transition: opacity 0.3s ease; }

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import PhotoGallery from "@/components/PhotoGallery";
 
 export const metadata: Metadata = {
   title: "A Cut Above Landscaping & Excavation | Massachusetts",
@@ -12,17 +13,17 @@ const services = [
   { label: "Residential", title: "Hardscaping\n& Design", href: "/residential/hardscaping-design", img: "/images/hardscaping-hero.jpg" },
   { label: "Residential", title: "Light\nExcavation", href: "/residential/light-excavation", img: "/images/light-excav.jpg" },
   { label: "Commercial", title: "Property\nMaintenance", href: "/commercial/property-maintenance", img: "/images/prop-maint-1.jpg" },
-  { label: "Commercial", title: "Sitework &\nExcavation", href: "/commercial/sitework-excavation", img: "/images/commercial-hero.jpg" },
+  { label: "Commercial", title: "Sitework &\nExcavation", href: "/commercial/sitework-excavation", img: "/images/commercial-5.jpg" },
   { label: "Commercial", title: "Snow & Ice\nManagement", href: "/commercial/snow-ice-management", img: "/images/snow.jpg" },
 ];
 
 const gallery = [
-  "/images/gallery-1.jpg",
-  "/images/hardscaping-2.jpg",
-  "/images/gallery-3.jpg",
-  "/images/about-1.jpg",
-  "/images/gallery-5.jpg",
-  "/images/hardscaping-4.jpg",
+  { src: "/images/hardscaping-hero.jpg", alt: "Outdoor living space with patio, pool, and landscape lighting" },
+  { src: "/images/residential-hero.jpeg", alt: "Professional lawn mowing service at a residential property" },
+  { src: "/images/hardscaping-2.jpg", alt: "Custom hardscape patio and retaining wall installation" },
+  { src: "/images/light-excav.jpg", alt: "Excavation and drainage work at a residential site" },
+  { src: "/images/snow.jpg", alt: "Commercial snow removal with loader at night" },
+  { src: "/images/prop-maint-1.jpg", alt: "Commercial property landscape maintenance" },
 ];
 
 const stats = [
@@ -159,13 +160,10 @@ export default function HomePage() {
           <span className="copper-line mb-5" />
           <p className="label text-copper-500 mb-3">Our Work</p>
           <h2 className="section-title text-ink-900">Proven<br/>Results.</h2>
+          <p className="body-md text-ink-500 mt-4 max-w-xl">Click any photo to view it full size.</p>
         </div>
-        <div className="grid grid-cols-3 md:grid-cols-6 gap-1 h-72">
-          {gallery.map((src, i) => (
-            <div key={i} className={`relative overflow-hidden ${i === 0 || i === 4 ? "col-span-2" : "col-span-1"}`}>
-              <Image src={src} alt="A Cut Above project" fill className="object-cover hover:scale-105 transition-transform duration-500" />
-            </div>
-          ))}
+        <div className="wrap">
+          <PhotoGallery images={gallery} />
         </div>
       </section>
 
@@ -214,7 +212,7 @@ export default function HomePage() {
         <div className="wrap text-center">
           <p className="label text-ink-500 mb-3">Service Areas</p>
           <p className="text-ink-600 text-sm leading-loose font-heading">
-            Mendon · Milford · Norfolk · Hopedale · Sherborn · Wrentham · Holliston · Bellingham · Dover · Medway · Millis · Franklin · Medfield · Blackstone · Uxbridge
+            Franklin · Milford · Norfolk · Hopedale · Sherborn · Wrentham · Holliston · Bellingham · Dover · Medway · Millis · Franklin · Medfield · Blackstone · Uxbridge
           </p>
         </div>
       </div>

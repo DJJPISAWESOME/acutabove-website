@@ -109,7 +109,7 @@ export default function Page() {
             <p className="body-md text-white/50">Proudly serving communities across MetroWest and Central Massachusetts</p>
           </div>
           <div className="flex flex-wrap justify-center gap-3">
-            {["Grafton", "Northborough", "Southborough", "Westborough", "Shrewsbury", "Milford", "Hopkinton", "Upton", "Mendon", "Northbridge", "Uxbridge", "Douglas", "Worcester", "Framingham", "Natick", "Millis"].map(town => (
+            {["Grafton", "Northborough", "Southborough", "Westborough", "Shrewsbury", "Milford", "Hopkinton", "Upton", "Franklin", "Northbridge", "Uxbridge", "Douglas", "Worcester", "Framingham", "Natick", "Millis"].map(town => (
               <span key={town} className="text-white/60 font-heading text-sm border border-white/10 px-4 py-2 hover:border-copper-500 hover:text-copper-400 transition-colors">{town}</span>
             ))}
           </div>

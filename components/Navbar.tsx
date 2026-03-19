@@ -51,7 +51,7 @@ export default function Navbar() {
             </a>
             <span className="hidden sm:flex items-center gap-1.5 text-xs text-white/55">
               <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
-              Mendon, MA
+              Franklin, MA
             </span>
           </div>
           <a href="https://clienthub.getjobber.com/client_hubs/642fdd6d-d859-4d28-83c3-314377e6f47d/login/new?source=share_login" target="_blank" rel="noopener noreferrer" className="text-xs text-white/45 hover:text-copper-400 transition-colors">
