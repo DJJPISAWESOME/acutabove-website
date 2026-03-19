@@ -36,7 +36,7 @@ export default function Page() {
                 </div>
                 <div>
                   <p className="font-heading font-semibold text-ink-900 text-sm">Phone</p>
-                  <a href="tel:7742997739" className="text-ink-500 text-sm hover:text-copper-500 transition-colors">(774) 299-7739</a>
+                  <a href="tel:+17742916846" className="text-ink-500 text-sm hover:text-copper-500 transition-colors">(774) 291-6846</a>
                 </div>
               </div>
 
