@@ -4,21 +4,19 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: { default: "A Cut Above Landscaping & Excavation | MA", template: "%s | A Cut Above" },
-  description: "Expert residential and commercial landscaping, hardscaping, and excavation services across Massachusetts. Licensed, insured, and locally rooted for over a decade.",
-  keywords: "landscaping Massachusetts, excavation MA, hardscaping, lawn care, snow removal, commercial landscaping, residential landscaping",
-  openGraph: {
-    type: "website",
-    siteName: "A Cut Above Landscaping & Excavation",
-    title: "A Cut Above Landscaping & Excavation",
-    description: "Expert landscape solutions for homes and businesses across Massachusetts.",
+  title: {
+    default: "A Cut Above Landscaping & Excavation | Massachusetts",
+    template: "%s | A Cut Above",
   },
+  description:
+    "Professional residential and commercial landscaping, hardscaping, excavation, and snow & ice management across 15+ Massachusetts communities.",
+  icons: { icon: "/favicon.ico" },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body>
+      <body className="bg-chalk text-ink-900 font-body antialiased">
         <Navbar />
         <main>{children}</main>
         <Footer />

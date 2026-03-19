@@ -1,188 +1,168 @@
 "use client";
-
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
-const residentialLinks = [
-  { href: "/residential", label: "All Residential Services" },
-  { href: "/residential/landscape-maintenance", label: "Landscape Maintenance" },
-  { href: "/residential/hardscaping-design", label: "Hardscaping & Design" },
-  { href: "/residential/light-excavation", label: "Light Excavation Work" },
-];
-
-const commercialLinks = [
-  { href: "/commercial", label: "All Commercial Services" },
-  { href: "/commercial/property-maintenance", label: "Property Maintenance" },
-  { href: "/commercial/sitework-excavation", label: "Sitework & Excavation" },
-  { href: "/commercial/snow-ice-management", label: "Snow & Ice Management" },
+const nav = [
+  {
+    label: "Residential",
+    href: "/residential",
+    sub: [
+      { label: "Landscape Maintenance", href: "/residential/landscape-maintenance" },
+      { label: "Hardscaping & Design", href: "/residential/hardscaping-design" },
+      { label: "Light Excavation", href: "/residential/light-excavation" },
+    ],
+  },
+  {
+    label: "Commercial",
+    href: "/commercial",
+    sub: [
+      { label: "Property Maintenance", href: "/commercial/property-maintenance" },
+      { label: "Sitework & Excavation", href: "/commercial/sitework-excavation" },
+      { label: "Snow & Ice Management", href: "/commercial/snow-ice-management" },
+    ],
+  },
+  { label: "Careers", href: "/careers" },
+  { label: "Contact", href: "/contact" },
 ];
 
 export default function Navbar() {
+  const [open, setOpen] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const [mobileExpanded, setMobileExpanded] = useState<string | null>(null);
   const [scrolled, setScrolled] = useState(false);
-  const [mobileOpen, setMobileOpen] = useState(false);
-  const [mobileRes, setMobileRes] = useState(false);
-  const [mobileCom, setMobileCom] = useState(false);
-  const [resDropdown, setResDropdown] = useState(false);
-  const [comDropdown, setComDropdown] = useState(false);
-  const resRef = useRef<HTMLDivElement>(null);
-  const comRef = useRef<HTMLDivElement>(null);
+  const dropdownRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 50);
+    const onScroll = () => setScrolled(window.scrollY > 40);
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  // Close dropdowns on outside click
-  useEffect(() => {
-    const handler = (e: MouseEvent) => {
-      if (resRef.current && !resRef.current.contains(e.target as Node)) setResDropdown(false);
-      if (comRef.current && !comRef.current.contains(e.target as Node)) setComDropdown(false);
-    };
-    document.addEventListener("mousedown", handler);
-    return () => document.removeEventListener("mousedown", handler);
-  }, []);
-
-  const navTextClass = scrolled ? "text-charcoal hover:text-gold-500" : "text-white hover:text-gold-300";
-  const dropItemClass = "block px-5 py-2.5 text-sm text-charcoal hover:bg-pine-50 hover:text-gold-600 transition-colors border-b border-gray-50 last:border-0";
-
   return (
-    <header className={`fixed top-0 inset-x-0 z-50 transition-all duration-400 ${scrolled ? "bg-white shadow-md py-3" : "py-5 bg-transparent"}`}>
-      <div className="container-wide flex items-center justify-between">
-
-        {/* Logo */}
-        <Link href="/" className="flex-shrink-0">
-          <Image
-            src="https://static.wixstatic.com/media/3403b0_cfc3adac6c46487bb57858fad61d5f80~mv2.png/v1/fill/w_472,h_314,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/ACAlogo(No-Number).png"
-            alt="A Cut Above Landscaping"
-            width={110} height={73}
-            className="object-contain"
-            priority
-          />
-        </Link>
-
-        {/* Desktop Nav */}
-        <nav className="hidden lg:flex items-center gap-7">
-          <Link href="/" className={`text-sm font-medium tracking-wide transition-colors duration-200 ${navTextClass}`}>
-            Home
-          </Link>
-
-          {/* Residential Dropdown */}
-          <div ref={resRef} className="relative">
-            <button
-              onClick={() => { setResDropdown(!resDropdown); setComDropdown(false); }}
-              className={`flex items-center gap-1 text-sm font-medium tracking-wide transition-colors duration-200 ${navTextClass}`}
-            >
-              Residential
-              <svg className={`w-3.5 h-3.5 transition-transform ${resDropdown ? "rotate-180" : ""}`} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
-                <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
-              </svg>
-            </button>
-            {resDropdown && (
-              <div className="absolute top-full left-1/2 -translate-x-1/2 mt-3 w-56 bg-white shadow-xl border border-gray-100 py-1">
-                {residentialLinks.map(l => (
-                  <Link key={l.href} href={l.href} className={dropItemClass} onClick={() => setResDropdown(false)}>
-                    {l.label}
-                  </Link>
-                ))}
-              </div>
-            )}
+    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? "bg-ink-900 shadow-2xl" : "bg-ink-900/95 backdrop-blur-sm"}`}>
+      {/* Top bar */}
+      <div className="border-b border-white/10">
+        <div className="wrap flex items-center justify-between py-1.5">
+          <div className="flex items-center gap-6">
+            <a href="tel:+17742916846" className="flex items-center gap-1.5 text-xs text-white/55 hover:text-copper-400 transition-colors">
+              <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/></svg>
+              (774) 291-6846
+            </a>
+            <span className="hidden sm:flex items-center gap-1.5 text-xs text-white/55">
+              <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+              Mendon, MA
+            </span>
           </div>
-
-          {/* Commercial Dropdown */}
-          <div ref={comRef} className="relative">
-            <button
-              onClick={() => { setComDropdown(!comDropdown); setResDropdown(false); }}
-              className={`flex items-center gap-1 text-sm font-medium tracking-wide transition-colors duration-200 ${navTextClass}`}
-            >
-              Commercial
-              <svg className={`w-3.5 h-3.5 transition-transform ${comDropdown ? "rotate-180" : ""}`} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
-                <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
-              </svg>
-            </button>
-            {comDropdown && (
-              <div className="absolute top-full left-1/2 -translate-x-1/2 mt-3 w-56 bg-white shadow-xl border border-gray-100 py-1">
-                {commercialLinks.map(l => (
-                  <Link key={l.href} href={l.href} className={dropItemClass} onClick={() => setComDropdown(false)}>
-                    {l.label}
-                  </Link>
-                ))}
-              </div>
-            )}
-          </div>
-
-          <Link href="/careers" className={`text-sm font-medium tracking-wide transition-colors duration-200 ${navTextClass}`}>
-            Careers
-          </Link>
-          <Link href="/contact" className={`text-sm font-medium tracking-wide transition-colors duration-200 ${navTextClass}`}>
-            Contact
-          </Link>
-        </nav>
-
-        {/* CTA + Mobile Toggle */}
-        <div className="flex items-center gap-4">
-          <Link href="/contact" className="hidden lg:inline-flex btn-gold py-3 px-6 text-xs">
-            Free Estimate
-          </Link>
-
-          {/* Mobile Hamburger */}
-          <button
-            className="lg:hidden p-2 flex flex-col gap-[5px]"
-            onClick={() => setMobileOpen(!mobileOpen)}
-            aria-label="Menu"
-          >
-            {[0,1,2].map(i => (
-              <span key={i} className={`block h-0.5 w-6 transition-all duration-300 ${scrolled ? "bg-charcoal" : "bg-white"} ${
-                mobileOpen
-                  ? i === 0 ? "rotate-45 translate-y-[7px]"
-                  : i === 1 ? "opacity-0 scale-x-0"
-                  : "-rotate-45 -translate-y-[7px]"
-                  : ""
-              }`} />
-            ))}
-          </button>
+          <a href="https://clienthub.getjobber.com/client_hubs/642fdd6d-d859-4d28-83c3-314377e6f47d/login/new?source=share_login" target="_blank" rel="noopener noreferrer" className="text-xs text-white/45 hover:text-copper-400 transition-colors">
+            Client Login →
+          </a>
         </div>
       </div>
 
-      {/* Mobile Menu */}
-      <div className={`lg:hidden overflow-hidden transition-[max-height] duration-300 ${mobileOpen ? "max-h-[500px]" : "max-h-0"}`}>
-        <div className="bg-white border-t border-gray-100 px-5 py-4 flex flex-col gap-1">
-          <Link href="/" className="py-3 text-sm font-medium text-charcoal border-b border-gray-100" onClick={() => setMobileOpen(false)}>Home</Link>
+      {/* Main nav */}
+      <nav className="wrap flex items-center justify-between py-3" ref={dropdownRef}>
+        <Link href="/" className="flex-shrink-0" onClick={() => setOpen(false)}>
+          <Image src="/images/logo.png" alt="A Cut Above" width={140} height={93} className="h-11 w-auto" priority />
+        </Link>
 
-          {/* Mobile Residential */}
-          <div className="border-b border-gray-100">
-            <button onClick={() => setMobileRes(!mobileRes)} className="w-full py-3 text-sm font-medium text-charcoal flex justify-between items-center">
-              Residential
-              <svg className={`w-4 h-4 transition-transform ${mobileRes ? "rotate-180" : ""}`} fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" /></svg>
-            </button>
-            {mobileRes && (
-              <div className="pb-2 pl-4 flex flex-col gap-1">
-                {residentialLinks.map(l => (
-                  <Link key={l.href} href={l.href} className="py-2 text-sm text-gray-600 hover:text-gold-500" onClick={() => setMobileOpen(false)}>{l.label}</Link>
-                ))}
+        {/* Desktop */}
+        <div className="hidden lg:flex items-center gap-0.5">
+          <Link href="/" className="px-4 py-2 text-sm font-heading font-medium text-white/75 hover:text-white transition-colors">Home</Link>
+          {nav.map((item) =>
+            item.sub ? (
+              <div key={item.label} className="relative group">
+                <button
+                  className="flex items-center gap-1 px-4 py-2 text-sm font-heading font-medium text-white/75 hover:text-white transition-colors"
+                  onClick={() => setActiveDropdown(activeDropdown === item.label ? null : item.label)}
+                  onMouseEnter={() => setActiveDropdown(item.label)}
+                  onMouseLeave={() => setActiveDropdown(null)}
+                >
+                  {item.label}
+                  <svg className={`w-3.5 h-3.5 transition-transform duration-200 ${activeDropdown === item.label ? "rotate-180 text-copper-400" : ""}`} fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7"/></svg>
+                </button>
+                {activeDropdown === item.label && (
+                  <div
+                    className="absolute top-full left-0 mt-0 w-56 bg-ink-800 border border-white/10 shadow-2xl shadow-ink-950/50 py-2"
+                    onMouseEnter={() => setActiveDropdown(item.label)}
+                    onMouseLeave={() => setActiveDropdown(null)}
+                  >
+                    <Link href={item.href} onClick={() => setActiveDropdown(null)}
+                      className="block px-5 py-2 text-[11px] text-copper-400 hover:text-copper-300 font-heading tracking-widest uppercase transition-colors">
+                      View All →
+                    </Link>
+                    <div className="border-t border-white/10 mt-1 pt-1">
+                      {item.sub.map((s) => (
+                        <Link key={s.href} href={s.href} onClick={() => setActiveDropdown(null)}
+                          className="block px-5 py-2.5 text-sm text-white/75 hover:text-white hover:bg-ink-700/50 transition-colors">
+                          {s.label}
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                )}
               </div>
-            )}
-          </div>
+            ) : (
+              <Link key={item.label} href={item.href}
+                className="px-4 py-2 text-sm font-heading font-medium text-white/75 hover:text-white transition-colors">
+                {item.label}
+              </Link>
+            )
+          )}
+        </div>
 
-          {/* Mobile Commercial */}
-          <div className="border-b border-gray-100">
-            <button onClick={() => setMobileCom(!mobileCom)} className="w-full py-3 text-sm font-medium text-charcoal flex justify-between items-center">
-              Commercial
-              <svg className={`w-4 h-4 transition-transform ${mobileCom ? "rotate-180" : ""}`} fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" /></svg>
-            </button>
-            {mobileCom && (
-              <div className="pb-2 pl-4 flex flex-col gap-1">
-                {commercialLinks.map(l => (
-                  <Link key={l.href} href={l.href} className="py-2 text-sm text-gray-600 hover:text-gold-500" onClick={() => setMobileOpen(false)}>{l.label}</Link>
-                ))}
-              </div>
-            )}
-          </div>
+        <div className="flex items-center gap-3">
+          <Link href="/contact" className="hidden md:inline-flex items-center gap-2 px-5 py-2.5 bg-copper-500 text-white text-xs font-heading font-semibold tracking-widest uppercase hover:bg-copper-600 transition-colors">
+            Free Estimate
+          </Link>
+          <button onClick={() => setOpen(!open)} className="lg:hidden p-2 text-white" aria-label="Menu">
+            <div className="space-y-1.5">
+              <span className={`block w-6 h-0.5 bg-white transition-all duration-300 ${open ? "rotate-45 translate-y-2" : ""}`}/>
+              <span className={`block w-6 h-0.5 bg-white transition-all duration-300 ${open ? "opacity-0" : ""}`}/>
+              <span className={`block w-6 h-0.5 bg-white transition-all duration-300 ${open ? "-rotate-45 -translate-y-2" : ""}`}/>
+            </div>
+          </button>
+        </div>
+      </nav>
 
-          <Link href="/careers" className="py-3 text-sm font-medium text-charcoal border-b border-gray-100" onClick={() => setMobileOpen(false)}>Careers</Link>
-          <Link href="/contact" className="py-3 text-sm font-medium text-charcoal border-b border-gray-100" onClick={() => setMobileOpen(false)}>Contact</Link>
-          <Link href="/contact" className="mt-3 btn-gold justify-center" onClick={() => setMobileOpen(false)}>Request Free Estimate</Link>
+      {/* Mobile */}
+      <div className={`lg:hidden overflow-hidden transition-all duration-300 ${open ? "max-h-screen" : "max-h-0"}`}>
+        <div className="bg-ink-950 border-t border-white/10 pb-6">
+          <div className="wrap pt-3 space-y-0.5">
+            <Link href="/" onClick={() => setOpen(false)} className="block px-4 py-3 text-white/75 hover:text-white font-heading">Home</Link>
+            {nav.map((item) =>
+              item.sub ? (
+                <div key={item.label}>
+                  <button onClick={() => setMobileExpanded(mobileExpanded === item.label ? null : item.label)}
+                    className="flex items-center justify-between w-full px-4 py-3 text-white/75 hover:text-white font-heading">
+                    {item.label}
+                    <svg className={`w-4 h-4 transition-transform ${mobileExpanded === item.label ? "rotate-180" : ""}`} fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7"/></svg>
+                  </button>
+                  {mobileExpanded === item.label && (
+                    <div className="ml-4 border-l-2 border-copper-500/30 bg-ink-900/50 py-1">
+                      {item.sub.map((s) => (
+                        <Link key={s.href} href={s.href} onClick={() => setOpen(false)}
+                          className="block px-5 py-2.5 text-sm text-white/65 hover:text-white transition-colors">
+                          {s.label}
+                        </Link>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              ) : (
+                <Link key={item.label} href={item.href} onClick={() => setOpen(false)}
+                  className="block px-4 py-3 text-white/75 hover:text-white font-heading">
+                  {item.label}
+                </Link>
+              )
+            )}
+            <div className="pt-4 px-4">
+              <Link href="/contact" onClick={() => setOpen(false)}
+                className="flex items-center justify-center gap-2 w-full px-6 py-4 bg-copper-500 text-white text-sm font-heading font-semibold tracking-widest uppercase hover:bg-copper-600 transition-colors">
+                Request Free Estimate
+              </Link>
+            </div>
+          </div>
         </div>
       </div>
     </header>

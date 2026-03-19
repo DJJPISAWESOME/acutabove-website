@@ -9,52 +9,57 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        pine: {
-          50:  "#f0f7f2",
-          100: "#d9eee0",
-          200: "#b3dcc1",
-          300: "#7fc49e",
-          400: "#4da87b",
-          500: "#2e8a5e",
-          600: "#1f6e48",
-          700: "#195a3b",
-          800: "#154830",
-          900: "#0f3322",
-          950: "#081f14",
+        // Deep slate navy — primary dark
+        ink: {
+          50:  "#EEF0F3",
+          100: "#CDD3DB",
+          200: "#9BAAB8",
+          300: "#6A8094",
+          400: "#3D5A71",
+          500: "#1E3A52",
+          600: "#162D42",
+          700: "#0F2133",
+          800: "#091626",
+          900: "#060E1C",
+          950: "#030810",
         },
-        gold: {
-          50:  "#fdf8ee",
-          100: "#f9edcc",
-          200: "#f2d98a",
-          300: "#ebc34f",
-          400: "#d4a83c",
-          500: "#b8862e",
-          600: "#9a6a20",
-          700: "#7d5218",
-          800: "#653f12",
-          900: "#52300d",
+        // Rich copper — primary accent
+        copper: {
+          50:  "#FDF4EE",
+          100: "#FAE3CE",
+          200: "#F5C49E",
+          300: "#EFA070",
+          400: "#E07A40",
+          500: "#C4612A",
+          600: "#A34D1D",
+          700: "#7E3A10",
+          800: "#582807",
+          900: "#321503",
+          950: "#1A0A00",
         },
-        slate: {
-          950: "#0b1120",
+        // Soft sage green — secondary accent
+        sage: {
+          50:  "#F2F6F2",
+          100: "#DEE9DE",
+          200: "#BDD4BE",
+          300: "#9BBE9D",
+          400: "#7FA981",
+          500: "#628D64",
+          600: "#4D714F",
+          700: "#3A553B",
+          800: "#273A28",
+          900: "#152016",
+          950: "#0A100B",
         },
-        cream: "#FAF7F2",
-        charcoal: "#111827",
+        // Warm parchment backgrounds
+        parchment: "#F7F2EA",
+        stone: "#E5D9C8",
+        chalk: "#FDFAF5",
       },
       fontFamily: {
-        display: ["Playfair Display", "Georgia", "serif"],
-        body: ["Inter", "system-ui", "sans-serif"],
-      },
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-      },
-      animation: {
-        "fade-up": "fadeUp 0.6s ease-out forwards",
-      },
-      keyframes: {
-        fadeUp: {
-          "0%": { opacity: "0", transform: "translateY(24px)" },
-          "100%": { opacity: "1", transform: "translateY(0)" },
-        },
+        display: ["var(--font-bebas)", "Impact", "sans-serif"],
+        heading: ["var(--font-outfit)", "system-ui", "sans-serif"],
+        body: ["var(--font-dm-sans)", "system-ui", "sans-serif"],
       },
     },
   },
